@@ -7,16 +7,34 @@
 //
 
 #import "AppDelegate.h"
+#import "CalculadoraViewController.h"
+
 
 @implementation AppDelegate
+@synthesize rootPrincipal;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.rootPrincipal = [[CalculadoraViewController alloc] initWithNibName:@"View" bundle:nil];
+//    [self.window addSubview:self.rootPrincipal.view];
+    self.window.rootViewController = self.rootPrincipal;
+    
+    //self.window.backgroundColor = [UIColor yellowColor];
     [self.window makeKeyAndVisible];
     return YES;
+    
+    
+    /*
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    return YES;
+    */
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
