@@ -13,10 +13,12 @@
 @end
 
 @implementation ViewController
+@synthesize etiqueta;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        etiqueta.text = @".";
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,4 +28,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+
+-(IBAction)botoncito:(UIButton *)sender{
+    etiqueta.text = @"Hola Universo ;-)";
+}
 @end

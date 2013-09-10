@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel *etiqueta;
+
+-(IBAction)botoncito:(UIButton *)sender;
+
 @end
